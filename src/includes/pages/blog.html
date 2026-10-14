@@ -1,0 +1,4 @@
+{% set L = lang %}{% set U = urlbase %}{% set d = pg.blog %}
+{% set title = d.title[L] %}{% set description = d.lede[L] %}
+<section class="sec-s"><div class="wrap stack" style="gap:40px"><div class="stack" style="gap:14px;max-width:720px"><h1 class="h-xl">{{ d.title[L] }}</h1><p class="lede muted">{{ d.lede[L] }}</p></div>
+<div class="grid3" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">{% for post in collections.blog %}<a class="post" href="{{ U }}blog/{{ post.fileSlug }}/">{% if post.data.image %}<img src="{{ post.data.image }}" alt="">{% else %}<div class="ph photo"><span>[ photo ]</span></div>{% endif %}<span class="kicker" style="font-size:12px;letter-spacing:.12em">{{ post.data['category_' + L] }} · {{ post.date | date(L) }}</span><b>{{ post.data['title_' + L] }}</b><span class="muted" style="font-size:15px;line-height:1.5">{{ post.data['excerpt_' + L] }}</span></a>{% endfor %}</div></div></section>

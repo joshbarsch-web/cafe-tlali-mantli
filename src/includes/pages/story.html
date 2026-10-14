@@ -1,0 +1,8 @@
+{% from "macros.html" import ph %}{% set L = lang %}{% set U = urlbase %}{% set d = pg.story %}
+{% set title = d.title[L] %}{% set description = d.lede[L] %}
+<section class="red" style="padding:72px 0"><div class="wrap stack" style="gap:24px"><div class="scallops sm"><i style="border-color:var(--pink)"></i><i style="border-color:var(--pink)"></i><i style="border-color:var(--pink)"></i></div>
+<h1 style="font-size:clamp(56px,9vw,120px);line-height:.88;color:var(--pink);max-width:900px;text-wrap:balance">{{ d.title[L] }}</h1><p class="lede" style="font-size:21px;max-width:680px">{{ d.lede[L] }}</p></div></section>
+<section class="sec"><div class="wrap grid2" style="align-items:start;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><img src="{{ d.image }}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px">
+<div class="stack" style="gap:24px;font-size:18px;line-height:1.6"><h2 style="font-size:40px;color:var(--red)">{{ d.h1[L] }}</h2><p style="margin:0">{{ d.p1[L] }}</p><p style="margin:0">{{ d.p2[L] }}</p><h2 style="font-size:40px;color:var(--red);margin-top:12px">{{ d.h2[L] }}</h2><p style="margin:0">{{ d.p3[L] }}</p></div></div></section>
+<section class="pink" style="padding:72px 0"><div class="wrap stack" style="gap:32px"><h2 class="h-md">{{ d.producersTitle[L] }}</h2>
+<div class="grid4">{% for p in products %}{% if p.kind == 'bean' %}<div class="prod" style="gap:10px">{{ ph('photo', 'photo: ' + p.region + ' farm / producer', p.farmImage) }}<span class="kicker" style="font-size:12px;letter-spacing:.12em">{{ p.state }}</span><b style="font-family:'Abril Fatface',serif;font-weight:400;font-size:24px">{{ p.region }}</b><span class="desc">{{ p.farm[L] }}</span></div>{% endif %}{% endfor %}</div></div></section>

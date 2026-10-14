@@ -1,0 +1,8 @@
+{% from "macros.html" import input %}{% set L = lang %}{% set U = urlbase %}{% set d = pg.wholesale %}
+{% set title = d.title[L] %}{% set description = d.lede[L] %}
+<section class="pink" style="padding:72px 0"><div class="wrap stack" style="gap:18px"><h1 class="h-xl" style="max-width:800px">{{ d.title[L] }}</h1><p class="lede" style="max-width:620px">{{ d.lede[L] }}</p></div></section>
+<section style="padding:72px 0 96px"><div class="wrap grid2" style="align-items:start;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="list dark">{% for w in d.perks %}<div><b>{{ w.title[L] }}</b><span>{{ w.body[L] }}</span></div>{% endfor %}</div>
+<form class="form" name="mayoreo" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ U }}gracias/"><input type="hidden" name="form-name" value="mayoreo"><p hidden><input name="bot-field"></p>
+<h3>{{ d.formTitle[L] }}</h3>{{ input(ui.fName[L], 'nombre') }}{{ input(ui.fBiz[L], 'negocio') }}<div class="two">{{ input(ui.fEmail[L], 'correo', 'email') }}{{ input(ui.fWa[L], 'whatsapp', 'tel') }}</div>{{ input(ui.fCity[L], 'ciudad') }}
+<textarea name="mensaje" rows="4" placeholder="{{ ui.fVolume[L] }}" aria-label="{{ ui.fVolume[L] }}"></textarea><button class="btn btn-red" type="submit">{{ ui.fSend[L] }}</button></form></div></section>

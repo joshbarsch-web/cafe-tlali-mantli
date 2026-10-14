@@ -41,5 +41,5 @@ module.exports = function (c) {
   c.addFilter('json', (v) => JSON.stringify(v));
   c.addFilter('alt', (url, lang) => (lang === 'en' ? url.replace(/^\/en\//, '/') : '/en' + url));
 
-  return { dir: { input: 'src', includes: '_includes' }, markdownTemplateEngine: 'njk', htmlTemplateEngine: 'njk' };
+  return { dir: { input: 'src', includes: 'includes' }, markdownTemplateEngine: 'njk', htmlTemplateEngine: 'njk' };
 };

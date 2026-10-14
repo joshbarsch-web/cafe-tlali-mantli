@@ -1,0 +1,9 @@
+{% set L = lang %}{% set U = urlbase %}
+{% set title = post.data['title_' + L] %}{% set description = post.data['excerpt_' + L] %}
+<section class="sec-s"><div class="wrap stack" style="gap:28px;max-width:860px">
+<a href="{{ U }}blog/" style="font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">← {{ ui.allPosts[L] }}</a>
+<span class="kicker">{{ post.data['category_' + L] }} · {{ post.date | date(L) }}</span>
+<h1 class="h-lg">{{ post.data['title_' + L] }}</h1>
+{% if post.data.image %}<img src="{{ post.data.image }}" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px">{% endif %}
+<div class="prose">{% if L == 'en' %}{{ post.data.body_en | md | safe }}{% else %}{{ post.templateContent | safe }}{% endif %}</div>
+</div></section>

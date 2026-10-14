@@ -1,0 +1,39 @@
+{% set L = lang %}{% set U = urlbase %}
+{% set navItems = [["tienda", ui.navShop], ["drips", ui.navDrips], ["historia", ui.navStory], ["suscripcion", ui.navSub], ["mayoreo", ui.navWholesale], ["faq", ui.navFaq], ["contacto", ui.navContact], ["blog", ui.navBlog]] %}
+<!DOCTYPE html>
+<html lang="{{ 'en' if L == 'en' else 'es-MX' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title }} · {{ site.name }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="alternate" hreflang="{{ 'es-MX' if L == 'en' else 'en' }}" href="{{ site.domain }}{{ page.url | alt(L) }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="{{ U }}">{{ site.name }}</a>
+  <nav class="main">{% for n in navItems %}<a href="{{ U }}{{ n[0] }}/"{% if page.url.indexOf(U + n[0]) == 0 or (n[0] == 'tienda' and page.url.indexOf(U + 'producto') == 0) %} class="on"{% endif %}>{{ n[1][L] }}</a>{% endfor %}</nav>
+  <div class="hdr-actions">
+    <a class="lang" href="{{ page.url | alt(L) }}" hreflang="{{ 'es' if L == 'en' else 'en' }}">{{ 'ES' if L == 'en' else 'EN' }}</a>
+    <button class="snipcart-checkout cartbtn">{{ ui.cart[L] }} · <span class="snipcart-items-count">0</span></button>
+  </div>
+</div></header>
+{{ content | safe }}
+<footer class="site"><div class="wrap">
+  <a class="ig" href="https://www.instagram.com/{{ site.instagram }}">@{{ site.instagram }}</a>
+  <div class="row"><span>{{ site.footerTag[L] }} · {{ site.shipNote[L] }}</span>
+    <div style="display:flex;gap:20px;flex-wrap:wrap"><a href="{{ U }}faq/">{{ ui.navFaq[L] }}</a><a href="{{ U }}contacto/">{{ ui.navContact[L] }}</a><a href="{{ U }}blog/">Blog</a><a href="{{ U }}privacidad/">{{ ui.privacyLink[L] }}</a></div>
+  </div>
+</div></footer>
+<div hidden id="snipcart" data-api-key="{{ site.snipcartKey }}" data-currency="mxn" data-config-modal-style="side"></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+<script>
+document.addEventListener('snipcart.ready', function () { try { Snipcart.api.session.setLanguage('{{ L }}'); } catch (e) {} });
+</script>
+</body>
+</html>

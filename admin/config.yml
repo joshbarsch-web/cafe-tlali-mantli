@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: joshbarsch-web/cafe-tlali-mantli
   branch: main
   commit_messages:
     create: "Nuevo: {{collection}} “{{slug}}”"
