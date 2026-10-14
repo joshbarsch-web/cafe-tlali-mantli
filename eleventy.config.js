@@ -15,6 +15,9 @@ module.exports = function (c) {
   c.addPassthroughCopy('styles.css');
   c.addPassthroughCopy('robots.txt');
   c.addWatchTarget('content');
+  // Ignore legacy .njk templates / _includes left over from earlier uploads
+  c.ignores.add('src/**/*.njk');
+  c.ignores.add('src/_includes/**');
 
   c.addGlobalData('site', site);
   c.addGlobalData('ui', ui);
