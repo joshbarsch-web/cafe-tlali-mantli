@@ -1,0 +1,56 @@
+{
+ "title": {
+  "es": "¿Tienes cafetería, oficina u hotel?",
+  "en": "Run a café, office or hotel?"
+ },
+ "lede": {
+  "es": "Drips con tu marca para hoteles y Airbnbs, grano para cafeterías, cajas para oficinas. Cuéntanos qué necesitas y te cotizamos en 24 horas.",
+  "en": "Branded drips for hotels and Airbnbs, beans for cafés, boxes for offices. Tell us what you need and we’ll quote within 24 hours."
+ },
+ "formTitle": {
+  "es": "Pide tu cotización",
+  "en": "Request a quote"
+ },
+ "perks": [
+  {
+   "title": {
+    "es": "Desde 200 drips o 5 kg al mes",
+    "en": "From 200 drips or 5 kg a month"
+   },
+   "body": {
+    "es": "Precios escalonados según volumen. Sin contrato mínimo.",
+    "en": "Tiered pricing by volume. No minimum contract."
+   }
+  },
+  {
+   "title": {
+    "es": "Drips con tu marca",
+    "en": "Drips with your brand"
+   },
+   "body": {
+    "es": "Sobre personalizado con tu logo para hoteles, Airbnbs y eventos.",
+    "en": "Custom sachet with your logo for hotels, Airbnbs and events."
+   }
+  },
+  {
+   "title": {
+    "es": "Entregas programadas",
+    "en": "Scheduled deliveries"
+   },
+   "body": {
+    "es": "Semanal o quincenal, directo a tu puerta en toda la República.",
+    "en": "Weekly or biweekly, straight to your door anywhere in Mexico."
+   }
+  },
+  {
+   "title": {
+    "es": "Capacitación y material",
+    "en": "Training and materials"
+   },
+   "body": {
+    "es": "Te ayudamos con la preparación y te mandamos material para tu barra o recepción.",
+    "en": "We help with brewing and send materials for your bar or front desk."
+   }
+  }
+ ]
+}

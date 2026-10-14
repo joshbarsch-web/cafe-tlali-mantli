@@ -1,0 +1,26 @@
+{
+ "id": "drips-100",
+ "order": 3,
+ "kind": "drip",
+ "big": "100",
+ "cups": 100,
+ "price": 1199,
+ "image": "",
+ "subscription": true,
+ "name": {
+  "es": "Caja de 100 drips",
+  "en": "Box of 100 drips"
+ },
+ "desc": {
+  "es": "El mejor precio por taza. Ideal para equipos y regalar.",
+  "en": "Best price per cup. Great for teams and gifting."
+ },
+ "tags": {
+  "es": "Drips, 10 g, Compostable",
+  "en": "Drips, 10 g, Compostable"
+ },
+ "long": {
+  "es": "Cada drip lleva 10 g de café recién molido de un solo origen, sellado con nitrógeno para que llegue fresco. Filtro compostable. Solo agrega agua caliente.",
+  "en": "Each drip holds 10 g of freshly ground single-origin coffee, nitrogen-sealed so it arrives fresh. Compostable filter. Just add hot water."
+ }
+}

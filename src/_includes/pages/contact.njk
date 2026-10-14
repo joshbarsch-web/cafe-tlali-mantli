@@ -1,0 +1,8 @@
+{% from "macros.njk" import input %}{% set L = lang %}{% set U = urlbase %}{% set d = pg.contact %}
+{% set title = d.title[L] %}{% set description = d.lede[L] %}
+<section class="sec-s"><div class="wrap grid2" style="align-items:start;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="stack" style="gap:24px"><h1 class="h-xl">{{ d.title[L] }}</h1><p class="lede muted" style="max-width:480px">{{ d.lede[L] }}</p>
+<div class="stack" style="gap:10px;font-size:17px;font-weight:700"><a href="https://wa.me/{{ site.whatsappLink }}" style="text-decoration:none">WhatsApp · {{ site.whatsapp }}</a><a href="mailto:{{ site.email }}" style="text-decoration:none">{{ site.email }}</a><a href="https://www.instagram.com/{{ site.instagram }}" style="text-decoration:none">Instagram · @{{ site.instagram }}</a><a href="{{ site.facebook }}" style="text-decoration:none">Facebook · {{ site.name }}</a></div>
+<span class="muted" style="font-size:14px;line-height:1.5">{{ d.note[L] }}</span></div>
+<form class="form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{ U }}gracias/"><input type="hidden" name="form-name" value="contacto"><p hidden><input name="bot-field"></p>
+{{ input(ui.fName[L], 'nombre') }}{{ input(ui.fEmail[L], 'correo', 'email') }}<textarea name="mensaje" rows="6" placeholder="{{ ui.fMsg[L] }}" aria-label="{{ ui.fMsg[L] }}" required></textarea><button class="btn btn-red" type="submit">{{ ui.fSend[L] }}</button></form></div></section>

@@ -1,0 +1,26 @@
+{
+ "id": "drips-50",
+ "order": 2,
+ "kind": "drip",
+ "big": "50",
+ "cups": 50,
+ "price": 649,
+ "image": "",
+ "subscription": true,
+ "name": {
+  "es": "Caja de 50 drips",
+  "en": "Box of 50 drips"
+ },
+ "desc": {
+  "es": "Para la casa o la oficina. Mezcla tus orígenes.",
+  "en": "For home or the office. Mix your origins."
+ },
+ "tags": {
+  "es": "Drips, 10 g, Compostable",
+  "en": "Drips, 10 g, Compostable"
+ },
+ "long": {
+  "es": "Cada drip lleva 10 g de café recién molido de un solo origen, sellado con nitrógeno para que llegue fresco. Filtro compostable. Solo agrega agua caliente.",
+  "en": "Each drip holds 10 g of freshly ground single-origin coffee, nitrogen-sealed so it arrives fresh. Compostable filter. Just add hot water."
+ }
+}

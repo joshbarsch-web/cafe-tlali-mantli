@@ -1,0 +1,4 @@
+{% set L = lang %}{% set U = urlbase %}{% set d = pg.faq %}
+{% set title = d.title[L] %}{% set description = d.lede[L] %}
+<section class="sec-s"><div class="wrap faq"><div class="side"><h1 class="h-lg">{{ d.title[L] }}</h1><p style="margin:0;font-size:17px;line-height:1.5" class="muted">{{ d.lede[L] }}</p><a href="{{ U }}contacto/" style="font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase">{{ ui.navContact[L] }} →</a></div>
+<div>{% for f in d.items %}<details{% if loop.first %} open{% endif %}><summary>{{ f.q[L] }}</summary><p>{{ f.a[L] }}</p></details>{% endfor %}<div style="border-top:1.5px solid var(--red)"></div></div></div></section>

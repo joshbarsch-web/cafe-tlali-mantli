@@ -1,0 +1,30 @@
+{
+ "id": "sierra-norte",
+ "order": 7,
+ "kind": "bean",
+ "price": 189,
+ "image": "",
+ "subscription": false,
+ "region": "Sierra Norte",
+ "state": "Puebla",
+ "name": {
+  "es": "Sierra Norte, Puebla",
+  "en": "Sierra Norte, Puebla"
+ },
+ "desc": {
+  "es": "Caramelo, cacao, tueste medio-oscuro. Aguanta leche.",
+  "en": "Caramel, cacao, medium-dark roast. Stands up to milk."
+ },
+ "tags": {
+  "es": "Caramelo, Cacao, Tueste medio-oscuro",
+  "en": "Caramel, Cacao, Medium-dark roast"
+ },
+ "farm": {
+  "es": "Finca placeholder · 1,100 msnm · secado al sol.",
+  "en": "Placeholder farm · 1,100 masl · sun-dried."
+ },
+ "long": {
+  "es": "Bolsa de 250 g con válvula. Tostamos en lotes pequeños la semana que haces tu pedido y te decimos la fecha de tueste en la etiqueta.",
+  "en": "250 g valve bag. We roast in small batches the week you order and print the roast date on the label."
+ }
+}

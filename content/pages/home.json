@@ -1,0 +1,77 @@
+{
+ "metaDescription": {
+  "es": "Café mexicano de especialidad y drips (filtros individuales) con envío a todo México.",
+  "en": "Mexican specialty coffee and drips (single-serve pour-over filters) shipped anywhere in Mexico."
+ },
+ "hero1": {
+  "es": "Del campo al barrio.",
+  "en": "From the farm to the barrio."
+ },
+ "hero2": {
+  "es": "Café de productores mexicanos, tostado con cariño y enviado a tu puerta. Y nuestros drips: una taza perfecta en tres minutos, sin cafetera.",
+  "en": "Coffee from Mexican growers, roasted with care and shipped to your door. Plus our drips: a perfect cup in three minutes, no machine needed."
+ },
+ "ctaShop": {
+  "es": "Ver la tienda",
+  "en": "Shop now"
+ },
+ "ctaDrips": {
+  "es": "¿Qué es un drip?",
+  "en": "What’s a drip?"
+ },
+ "heroImage": "/assets/logo.jpg",
+ "dripsTitle": {
+  "es": "Drips: café de verdad, en cualquier lugar.",
+  "en": "Drips: real coffee, anywhere."
+ },
+ "dripsSub": {
+  "es": "Un filtro individual ya relleno con café recién molido. Lo cuelgas del borde de tu taza, viertes agua caliente y en tres minutos tienes café recién hecho. Sin cafetera, sin cápsulas, sin complicarte.",
+  "en": "A single-serve filter pre-filled with freshly ground coffee. Hang it on the rim of your cup, pour hot water, and three minutes later you have fresh coffee. No machine, no pods, no fuss."
+ },
+ "shopTitle": {
+  "es": "La tienda",
+  "en": "The shop"
+ },
+ "seeAll": {
+  "es": "Ver todo",
+  "en": "See all"
+ },
+ "storyTitle": {
+  "es": "Del campo al barrio",
+  "en": "From the farm to the barrio"
+ },
+ "storyBody": {
+  "es": "Trabajamos directo con productores de Veracruz, Chiapas, Oaxaca y Puebla para que un café de verdad bueno llegue a cualquier cocina de México: sin pretensiones, sin intermediarios de más y a un precio justo para quien lo cultiva y quien lo toma.",
+  "en": "We work directly with growers in Veracruz, Chiapas, Oaxaca and Puebla so that genuinely good coffee reaches any kitchen in Mexico: no pretension, no extra middlemen, and a fair price for the people who grow it and the people who drink it."
+ },
+ "storyLink": {
+  "es": "Nuestra historia",
+  "en": "Our story"
+ },
+ "storyImage1": "/assets/cdmx-cup.jpg",
+ "storyImage2": "/assets/skull-cup.jpg",
+ "subTitle": {
+  "es": "Nunca te quedes sin café",
+  "en": "Never run out of coffee"
+ },
+ "subBody": {
+  "es": "Elige tu café y cada cuánto lo quieres; nosotros nos encargamos. Cambia o cancela cuando quieras.",
+  "en": "Pick your coffee and how often you want it; we handle the rest. Change or cancel anytime."
+ },
+ "subCta": {
+  "es": "Armar mi suscripción",
+  "en": "Build my subscription"
+ },
+ "wholesaleTitle": {
+  "es": "¿Tienes cafetería, oficina u hotel?",
+  "en": "Run a café, office or hotel?"
+ },
+ "wholesaleBody": {
+  "es": "Precios de mayoreo en drips y grano, con entregas programadas y material para tu barra.",
+  "en": "Wholesale pricing on drips and beans, with scheduled deliveries and materials for your bar."
+ },
+ "wholesaleCta": {
+  "es": "Mayoreo",
+  "en": "Wholesale"
+ }
+}

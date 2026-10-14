@@ -1,0 +1,112 @@
+{
+ "kicker": {
+  "es": "Nuestra carta de presentación",
+  "en": "Our calling card"
+ },
+ "title": {
+  "es": "Café de verdad, sin cafetera.",
+  "en": "Real coffee, no machine."
+ },
+ "sub": {
+  "es": "Un filtro individual ya relleno con café recién molido. Lo cuelgas del borde de tu taza, viertes agua caliente y en tres minutos tienes café recién hecho. Sin cafetera, sin cápsulas, sin complicarte.",
+  "en": "A single-serve filter pre-filled with freshly ground coffee. Hang it on the rim of your cup, pour hot water, and three minutes later you have fresh coffee. No machine, no pods, no fuss."
+ },
+ "ctaShop": {
+  "es": "Comprar drips",
+  "en": "Shop drips"
+ },
+ "heroImage": "/assets/drip-outdoor.jpg",
+ "howTitle": {
+  "es": "¿Cómo se usa?",
+  "en": "How does it work?"
+ },
+ "howNote": {
+  "es": "Tip: funciona igual con un termo. Perfecto para la oficina, el camión o el cerro.",
+  "en": "Tip: works just as well in a thermos. Perfect for the office, the bus or the trail."
+ },
+ "steps": [
+  {
+   "title": {
+    "es": "Abre y cuelga",
+    "en": "Open and hang"
+   },
+   "body": {
+    "es": "Rasga el sobre, abre el filtro y engancha las alitas en el borde de tu taza.",
+    "en": "Tear the sachet, open the filter and hook the paper arms over the rim of your cup."
+   },
+   "image": ""
+  },
+  {
+   "title": {
+    "es": "Vierte agua caliente",
+    "en": "Pour hot water"
+   },
+   "body": {
+    "es": "Moja el café, espera 30 segundos y sigue vertiendo poco a poco hasta llenar.",
+    "en": "Wet the grounds, wait 30 seconds, then keep pouring slowly until full."
+   },
+   "image": ""
+  },
+  {
+   "title": {
+    "es": "Disfruta",
+    "en": "Enjoy"
+   },
+   "body": {
+    "es": "Retira el filtro y ya. Café recién hecho donde sea que estés.",
+    "en": "Lift the filter out and that’s it. Fresh coffee wherever you are."
+   },
+   "image": ""
+  }
+ ],
+ "whyTitle": {
+  "es": "¿Por qué drips y no cápsulas?",
+  "en": "Why drips and not pods?"
+ },
+ "why": [
+  {
+   "title": {
+    "es": "Café fresco, no polvo",
+    "en": "Fresh coffee, not powder"
+   },
+   "body": {
+    "es": "Molemos y empacamos cada semana con nitrógeno para que llegue como recién molido.",
+    "en": "We grind and nitrogen-seal every week so it arrives tasting freshly ground."
+   }
+  },
+  {
+   "title": {
+    "es": "Cero máquina",
+    "en": "Zero machine"
+   },
+   "body": {
+    "es": "Solo necesitas agua caliente. Sirve en casa, en la oficina o de viaje.",
+    "en": "All you need is hot water. Works at home, at the office or on the road."
+   }
+  },
+  {
+   "title": {
+    "es": "Menos basura",
+    "en": "Less waste"
+   },
+   "body": {
+    "es": "Filtro de papel compostable y sobre reciclable. Nada de aluminio ni plástico.",
+    "en": "Compostable paper filter and recyclable sachet. No aluminum, no plastic."
+   }
+  },
+  {
+   "title": {
+    "es": "Café mexicano, de verdad",
+    "en": "Truly Mexican coffee"
+   },
+   "body": {
+    "es": "Cada drip lleva café de un solo origen de Veracruz, Chiapas, Oaxaca o Puebla.",
+    "en": "Every drip holds single-origin coffee from Veracruz, Chiapas, Oaxaca or Puebla."
+   }
+  }
+ ],
+ "pickBox": {
+  "es": "Elige tu caja",
+  "en": "Pick your box"
+ }
+}

@@ -1,0 +1,15 @@
+{% from "macros.njk" import buy, ph %}{% set L = lang %}{% set U = urlbase %}
+{% set title = p.name[L] %}{% set description = p.desc[L] %}
+<section class="sec-s" style="padding-top:40px"><div class="wrap stack" style="gap:32px">
+<a href="{{ U }}tienda/" style="font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">← {{ ui.back[L] }}</a>
+<div class="grid2" style="align-items:start">
+<div class="stack" style="gap:12px">{{ ph('sq', 'photo: ' + p.name[L] + ' — hero shot', p.image, 'border-radius:20px') }}</div>
+<div class="stack" style="gap:22px"><span class="kicker">{{ pg.shop.filterDrips[L] if p.kind == 'drip' else pg.shop.filterBeans[L] }}</span>
+<h1 style="font-size:clamp(40px,5vw,64px);color:var(--ink)">{{ p.name[L] }}</h1>
+<span style="font-weight:700;font-size:26px">{{ p.price | mxn }}</span>
+<p style="margin:0;font-size:17px;line-height:1.55" class="muted">{{ p.long[L] }}</p>
+<div class="chips">{% for n in p.tags[L] | split(',') %}<span>{{ n }}</span>{% endfor %}</div>
+{% if p.kind == 'bean' %}<span style="font-size:14px" class="muted">{{ ui.grind[L] }}: {{ ui.grinds[L] | replace('|', ' · ') }} — {{ ui.grindNote[L] }}</span>{% endif %}
+{% if p.cups %}<span style="font-weight:500;color:var(--red)">{{ (p.price / p.cups) | round | mxn }} {{ ui.perCup[L] }}</span>{% endif %}
+{{ buy(p, L, U, ui, site, 'btn-red') }}
+<span style="font-size:14px" class="muted">{{ site.shipNote[L] }}</span></div></div></div></section>

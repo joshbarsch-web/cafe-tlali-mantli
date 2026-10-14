@@ -1,0 +1,15 @@
+{% macro buy(p, L, U, ui, site, cls, label) -%}
+<button class="snipcart-add-item btn {{ cls }}" data-item-id="{{ p.id }}" data-item-name="{{ p.name[L] }}" data-item-price="{{ p.price }}" data-item-url="{{ U }}producto/{{ p.id }}/" data-item-description="{{ p.desc[L] }}" data-item-image="{{ p.image or site.logo }}"{% if p.kind == 'bean' %} data-item-custom1-name="{{ ui.grind[L] }}" data-item-custom1-options="{{ ui.grinds[L] }}"{% endif %}>{{ label or ui.add[L] }}</button>
+{%- endmacro %}
+
+{% macro ph(cls, label, img, extra) -%}
+{% if img %}<img class="ph-img {{ cls }}" src="{{ img }}" alt="" style="{{ extra }}">{% else %}<div class="ph {{ cls }}" style="{{ extra }}"><span>[ {{ label }} ]</span></div>{% endif %}
+{%- endmacro %}
+
+{% macro steps(list, L) -%}
+<div class="grid3">{% for s in list %}<div class="card">{{ ph('wide pinkph', 'illustration: step ' + loop.index, s.image) }}<div style="display:flex;gap:14px;align-items:baseline"><span class="num">0{{ loop.index }}</span><b style="font-size:19px">{{ s.title[L] }}</b></div><span style="font-size:15px;line-height:1.45" class="muted">{{ s.body[L] }}</span></div>{% endfor %}</div>
+{%- endmacro %}
+
+{% macro input(ph, name, type) -%}
+<input type="{{ type or 'text' }}" name="{{ name }}" placeholder="{{ ph }}" aria-label="{{ ph }}" required>
+{%- endmacro %}

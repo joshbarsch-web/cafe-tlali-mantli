@@ -1,0 +1,30 @@
+{
+ "id": "pluma-hidalgo",
+ "order": 6,
+ "kind": "bean",
+ "price": 189,
+ "image": "",
+ "subscription": true,
+ "region": "Pluma Hidalgo",
+ "state": "Oaxaca",
+ "name": {
+  "es": "Pluma Hidalgo, Oaxaca",
+  "en": "Pluma Hidalgo, Oaxaca"
+ },
+ "desc": {
+  "es": "Floral, miel, final largo. Nuestro favorito en drip.",
+  "en": "Floral, honey, long finish. Our favorite as a drip."
+ },
+ "tags": {
+  "es": "Floral, Miel, Final largo",
+  "en": "Floral, Honey, Long finish"
+ },
+ "farm": {
+  "es": "Finca placeholder · 1,300 msnm · variedad Pluma típica.",
+  "en": "Placeholder farm · 1,300 masl · classic Pluma variety."
+ },
+ "long": {
+  "es": "Bolsa de 250 g con válvula. Tostamos en lotes pequeños la semana que haces tu pedido y te decimos la fecha de tueste en la etiqueta.",
+  "en": "250 g valve bag. We roast in small batches the week you order and print the roast date on the label."
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "navShop": {
+  "es": "Tienda",
+  "en": "Shop"
+ },
+ "navDrips": {
+  "es": "Drips",
+  "en": "Drips"
+ },
+ "navStory": {
+  "es": "Historia",
+  "en": "Our story"
+ },
+ "navSub": {
+  "es": "Suscripción",
+  "en": "Subscription"
+ },
+ "navWholesale": {
+  "es": "Mayoreo",
+  "en": "Wholesale"
+ },
+ "navFaq": {
+  "es": "FAQ y envíos",
+  "en": "FAQ & shipping"
+ },
+ "navContact": {
+  "es": "Contacto",
+  "en": "Contact"
+ },
+ "navBlog": {
+  "es": "Blog",
+  "en": "Blog"
+ },
+ "cart": {
+  "es": "Carrito",
+  "en": "Cart"
+ },
+ "add": {
+  "es": "Agregar",
+  "en": "Add"
+ },
+ "grind": {
+  "es": "Molienda",
+  "en": "Grind"
+ },
+ "grinds": {
+  "es": "Grano entero|Molido para filtro|Molido para prensa",
+  "en": "Whole bean|Ground for filter|Ground for French press"
+ },
+ "grindNote": {
+  "es": "se elige en el carrito",
+  "en": "chosen in the cart"
+ },
+ "perCup": {
+  "es": "por taza",
+  "en": "per cup"
+ },
+ "back": {
+  "es": "Tienda",
+  "en": "Shop"
+ },
+ "fName": {
+  "es": "Nombre",
+  "en": "Name"
+ },
+ "fBiz": {
+  "es": "Negocio",
+  "en": "Business"
+ },
+ "fEmail": {
+  "es": "Correo",
+  "en": "Email"
+ },
+ "fWa": {
+  "es": "WhatsApp",
+  "en": "WhatsApp"
+ },
+ "fCity": {
+  "es": "Ciudad",
+  "en": "City"
+ },
+ "fVolume": {
+  "es": "¿Qué necesitas y cuánto al mes?",
+  "en": "What do you need and how much per month?"
+ },
+ "fMsg": {
+  "es": "¿En qué te ayudamos?",
+  "en": "How can we help?"
+ },
+ "fSend": {
+  "es": "Enviar",
+  "en": "Send"
+ },
+ "thanksTitle": {
+  "es": "¡Gracias!",
+  "en": "Thank you!"
+ },
+ "thanksBody": {
+  "es": "Recibimos tu mensaje. Te respondemos en menos de 24 horas.",
+  "en": "We got your message. We’ll reply within 24 hours."
+ },
+ "backHome": {
+  "es": "Volver al inicio",
+  "en": "Back to home"
+ },
+ "readMore": {
+  "es": "Leer más",
+  "en": "Read more"
+ },
+ "allPosts": {
+  "es": "Todas las entradas",
+  "en": "All posts"
+ },
+ "privacyLink": {
+  "es": "Aviso de privacidad",
+  "en": "Privacy notice"
+ }
+}

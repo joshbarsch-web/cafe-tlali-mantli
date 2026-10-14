@@ -1,0 +1,12 @@
+{% from "macros.njk" import buy, ph %}{% set L = lang %}{% set U = urlbase %}{% set d = pg.shop %}
+{% set title = d.title[L] %}{% set description = d.intro[L] %}
+<section class="sec-s"><div class="wrap stack" style="gap:40px">
+<div class="stack" style="gap:14px"><h1 class="h-xl">{{ d.title[L] }}</h1><p class="lede muted" style="max-width:620px">{{ d.intro[L] }}</p></div>
+<div class="filters"><a href="#" class="on" data-f="all">{{ d.filterAll[L] }}</a><a href="#" data-f="drip">{{ d.filterDrips[L] }}</a><a href="#" data-f="bean">{{ d.filterBeans[L] }}</a></div>
+<div class="shop-grid" id="grid">{% for p in products %}<div class="shop-item" data-kind="{{ p.kind }}">
+<a href="{{ U }}producto/{{ p.id }}/" class="ph" style="position:relative">{% if p.image %}<img class="ph-img sq" src="{{ p.image }}" alt="" style="border-radius:16px">{% else %}<span>[ photo: {{ p.name[L] }} ]</span>{% endif %}<span class="tag">{{ d.filterDrips[L] if p.kind == 'drip' else d.filterBeans[L] }}</span></a>
+<a href="{{ U }}producto/{{ p.id }}/" style="font-weight:700;font-size:18px;color:var(--ink);text-decoration:none">{{ p.name[L] }}</a><span class="muted" style="font-size:14px;line-height:1.4">{{ p.desc[L] }}</span>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;font-size:17px">{{ p.price | mxn }}</span>{{ buy(p, L, U, ui, site, 'btn-red btn-sm') }}</div></div>{% endfor %}</div>
+<div class="banner"><span>{{ d.shipBanner[L] }}</span><a href="{{ U }}faq/" style="font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase">{{ d.faqLink[L] }} →</a></div>
+</div></section>
+<script>document.querySelectorAll('.filters a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.filters a').forEach(x=>x.classList.remove('on'));a.classList.add('on');const f=a.dataset.f;document.querySelectorAll('#grid .shop-item').forEach(el=>el.style.display=(f==='all'||el.dataset.kind===f)?'':'none');}));</script>

@@ -1,0 +1,267 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Nuevo: {{collection}} “{{slug}}”"
+    update: "Editado: {{collection}} “{{slug}}”"
+    delete: "Borrado: {{collection}} “{{slug}}”"
+    uploadMedia: "Imagen: {{path}}"
+    deleteMedia: "Imagen borrada: {{path}}"
+
+locale: es
+site_url: https://cafetlalimantli.netlify.app
+logo_url: /assets/logo.jpg
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+# Reusable bilingual field sets
+_bi: &bi
+  - { label: Español, name: es, widget: string }
+  - { label: English, name: en, widget: string }
+_bit: &bit
+  - { label: Español, name: es, widget: text }
+  - { label: English, name: en, widget: text }
+_bim: &bim
+  - { label: Español, name: es, widget: markdown }
+  - { label: English, name: en, widget: markdown }
+
+collections:
+  - name: productos
+    label: Productos
+    label_singular: Producto
+    folder: content/products
+    create: true
+    format: json
+    slug: "{{id}}"
+    identifier_field: id
+    summary: "{{name.es}} — ${{price}} MXN"
+    sortable_fields: [order, price]
+    fields:
+      - { label: "ID (sin espacios ni acentos; no cambiar después de publicar)", name: id, widget: string, pattern: ["^[a-z0-9-]+$", "Solo minúsculas, números y guiones"] }
+      - { label: Orden en la tienda, name: order, widget: number, default: 10, value_type: int }
+      - { label: Tipo, name: kind, widget: select, options: [{ label: Drips, value: drip }, { label: Grano, value: bean }] }
+      - { label: Precio (MXN), name: price, widget: number, value_type: int }
+      - { label: Foto, name: image, widget: image, required: false, hint: "Cuadrada, mínimo 1200×1200" }
+      - { label: Disponible en suscripción, name: subscription, widget: boolean, default: false }
+      - { label: Nombre, name: name, widget: object, fields: *bi }
+      - { label: Descripción corta, name: desc, widget: object, fields: *bit }
+      - { label: Descripción larga, name: long, widget: object, fields: *bit }
+      - { label: "Etiquetas (separadas por coma)", name: tags, widget: object, fields: *bi }
+      - { label: "Número grande (solo drips, p. ej. 50)", name: big, widget: string, required: false }
+      - { label: "Tazas por caja (solo drips)", name: cups, widget: number, required: false, value_type: int }
+      - { label: "Región (solo grano)", name: region, widget: string, required: false }
+      - { label: "Estado (solo grano)", name: state, widget: string, required: false }
+      - { label: "Sobre la finca (solo grano)", name: farm, widget: object, required: false, fields: *bit }
+      - { label: "Foto de la finca (solo grano)", name: farmImage, widget: image, required: false }
+
+  - name: blog
+    label: Blog
+    label_singular: Entrada
+    folder: src/blog
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title_es}} — {{date}}"
+    fields:
+      - { label: Título (ES), name: title_es, widget: string }
+      - { label: Title (EN), name: title_en, widget: string }
+      - { label: Categoría (ES), name: category_es, widget: string }
+      - { label: Category (EN), name: category_en, widget: string }
+      - { label: Fecha, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Imagen, name: image, widget: image, required: false }
+      - { label: Resumen (ES), name: excerpt_es, widget: text }
+      - { label: Summary (EN), name: excerpt_en, widget: text }
+      - { label: Texto (ES), name: body, widget: markdown }
+      - { label: Body (EN), name: body_en, widget: markdown }
+
+  - name: paginas
+    label: Páginas
+    files:
+      - name: home
+        label: Inicio
+        file: content/pages/home.json
+        fields:
+          - { label: Descripción para Google, name: metaDescription, widget: object, fields: *bit }
+          - { label: Título principal, name: hero1, widget: object, fields: *bi }
+          - { label: Texto principal, name: hero2, widget: object, fields: *bit }
+          - { label: Botón tienda, name: ctaShop, widget: object, fields: *bi }
+          - { label: Botón drips, name: ctaDrips, widget: object, fields: *bi }
+          - { label: Imagen principal (logo), name: heroImage, widget: image }
+          - { label: Título drips, name: dripsTitle, widget: object, fields: *bi }
+          - { label: Texto drips, name: dripsSub, widget: object, fields: *bit }
+          - { label: Título tienda, name: shopTitle, widget: object, fields: *bi }
+          - { label: Enlace “ver todo”, name: seeAll, widget: object, fields: *bi }
+          - { label: Título historia, name: storyTitle, widget: object, fields: *bi }
+          - { label: Texto historia, name: storyBody, widget: object, fields: *bit }
+          - { label: Botón historia, name: storyLink, widget: object, fields: *bi }
+          - { label: Foto historia 1, name: storyImage1, widget: image }
+          - { label: Foto historia 2, name: storyImage2, widget: image }
+          - { label: Título suscripción, name: subTitle, widget: object, fields: *bi }
+          - { label: Texto suscripción, name: subBody, widget: object, fields: *bit }
+          - { label: Enlace suscripción, name: subCta, widget: object, fields: *bi }
+          - { label: Título mayoreo, name: wholesaleTitle, widget: object, fields: *bi }
+          - { label: Texto mayoreo, name: wholesaleBody, widget: object, fields: *bit }
+          - { label: Enlace mayoreo, name: wholesaleCta, widget: object, fields: *bi }
+      - name: drips
+        label: Drips
+        file: content/pages/drips.json
+        fields:
+          - { label: Etiqueta pequeña, name: kicker, widget: object, fields: *bi }
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Texto, name: sub, widget: object, fields: *bit }
+          - { label: Botón, name: ctaShop, widget: object, fields: *bi }
+          - { label: Foto principal, name: heroImage, widget: image }
+          - { label: Título “cómo se usa”, name: howTitle, widget: object, fields: *bi }
+          - label: Pasos
+            name: steps
+            widget: list
+            fields:
+              - { label: Título, name: title, widget: object, fields: *bi }
+              - { label: Texto, name: body, widget: object, fields: *bit }
+              - { label: Ilustración, name: image, widget: image, required: false }
+          - { label: Nota, name: howNote, widget: object, fields: *bit }
+          - { label: Título “por qué”, name: whyTitle, widget: object, fields: *bi }
+          - label: Razones
+            name: why
+            widget: list
+            fields:
+              - { label: Título, name: title, widget: object, fields: *bi }
+              - { label: Texto, name: body, widget: object, fields: *bit }
+          - { label: Título “elige tu caja”, name: pickBox, widget: object, fields: *bi }
+      - name: shop
+        label: Tienda
+        file: content/pages/shop.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Intro, name: intro, widget: object, fields: *bit }
+          - { label: Filtro “todo”, name: filterAll, widget: object, fields: *bi }
+          - { label: Filtro drips, name: filterDrips, widget: object, fields: *bi }
+          - { label: Filtro grano, name: filterBeans, widget: object, fields: *bi }
+          - { label: Aviso de envío, name: shipBanner, widget: object, fields: *bit }
+          - { label: Enlace FAQ, name: faqLink, widget: object, fields: *bi }
+      - name: story
+        label: Historia
+        file: content/pages/story.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+          - { label: Foto, name: image, widget: image }
+          - { label: Subtítulo 1, name: h1, widget: object, fields: *bi }
+          - { label: Párrafo 1, name: p1, widget: object, fields: *bit }
+          - { label: Párrafo 2, name: p2, widget: object, fields: *bit }
+          - { label: Subtítulo 2, name: h2, widget: object, fields: *bi }
+          - { label: Párrafo 3, name: p3, widget: object, fields: *bit }
+          - { label: Título productores, name: producersTitle, widget: object, fields: *bi }
+      - name: subscription
+        label: Suscripción
+        file: content/pages/subscription.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+          - { label: Paso 1, name: step1, widget: object, fields: *bi }
+          - { label: Paso 2, name: step2, widget: object, fields: *bi }
+          - { label: Resumen, name: summary, widget: object, fields: *bi }
+          - { label: “Precio normal”, name: regular, widget: object, fields: *bi }
+          - { label: “Cada entrega”, name: each, widget: object, fields: *bi }
+          - { label: Texto de ahorro, name: save, widget: object, fields: *bi }
+          - { label: Letra chica, name: fine, widget: object, fields: *bit }
+          - { label: Botón, name: button, widget: object, fields: *bi }
+          - { label: Frecuencia 2 semanas, name: freq2, widget: object, fields: *bi }
+          - { label: Frecuencia 4 semanas, name: freq4, widget: object, fields: *bi }
+          - { label: Frecuencia 8 semanas, name: freq8, widget: object, fields: *bi }
+      - name: wholesale
+        label: Mayoreo
+        file: content/pages/wholesale.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+          - { label: Título del formulario, name: formTitle, widget: object, fields: *bi }
+          - label: Beneficios
+            name: perks
+            widget: list
+            fields:
+              - { label: Título, name: title, widget: object, fields: *bi }
+              - { label: Texto, name: body, widget: object, fields: *bit }
+      - name: faq
+        label: FAQ y envíos
+        file: content/pages/faq.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+          - label: Preguntas
+            name: items
+            widget: list
+            summary: "{{fields.q.es}}"
+            fields:
+              - { label: Pregunta, name: q, widget: object, fields: *bi }
+              - { label: Respuesta, name: a, widget: object, fields: *bit }
+      - name: contact
+        label: Contacto
+        file: content/pages/contact.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+          - { label: Nota de horario, name: note, widget: object, fields: *bit }
+      - name: blog
+        label: Blog (portada)
+        file: content/pages/blog.json
+        fields:
+          - { label: Título, name: title, widget: object, fields: *bi }
+          - { label: Entrada, name: lede, widget: object, fields: *bit }
+
+  - name: ajustes
+    label: Ajustes
+    files:
+      - name: site
+        label: Sitio y contacto
+        file: content/site.json
+        fields:
+          - { label: Nombre, name: name, widget: string }
+          - { label: Dominio (con https://), name: domain, widget: string }
+          - { label: Logo, name: logo, widget: image }
+          - { label: WhatsApp (como se muestra), name: whatsapp, widget: string }
+          - { label: "WhatsApp para enlace (solo dígitos, con 52)", name: whatsappLink, widget: string }
+          - { label: Correo, name: email, widget: string }
+          - { label: Usuario de Instagram (sin @), name: instagram, widget: string }
+          - { label: URL de Facebook, name: facebook, widget: string }
+          - { label: Snipcart public API key, name: snipcartKey, widget: string }
+          - { label: Envío (MXN), name: shippingFlat, widget: number, value_type: int }
+          - { label: Envío gratis a partir de (MXN), name: freeShippingOver, widget: number, value_type: int }
+          - { label: Descuento suscripción (%), name: subscriptionDiscount, widget: number, value_type: int }
+          - { label: Texto del pie, name: footerTag, widget: object, fields: *bi }
+          - { label: Nota de envíos, name: shipNote, widget: object, fields: *bi }
+          - { label: Cinta deslizante, name: ticker, widget: object, fields: *bi }
+          - { label: Título aviso de privacidad, name: privacyTitle, widget: object, fields: *bi }
+          - { label: Aviso de privacidad, name: privacy, widget: object, fields: *bim }
+      - name: ui
+        label: Textos de interfaz
+        file: content/ui.json
+        fields:
+          - { label: Menú · Tienda, name: navShop, widget: object, fields: *bi }
+          - { label: Menú · Drips, name: navDrips, widget: object, fields: *bi }
+          - { label: Menú · Historia, name: navStory, widget: object, fields: *bi }
+          - { label: Menú · Suscripción, name: navSub, widget: object, fields: *bi }
+          - { label: Menú · Mayoreo, name: navWholesale, widget: object, fields: *bi }
+          - { label: Menú · FAQ, name: navFaq, widget: object, fields: *bi }
+          - { label: Menú · Contacto, name: navContact, widget: object, fields: *bi }
+          - { label: Menú · Blog, name: navBlog, widget: object, fields: *bi }
+          - { label: Carrito, name: cart, widget: object, fields: *bi }
+          - { label: Botón agregar, name: add, widget: object, fields: *bi }
+          - { label: Molienda, name: grind, widget: object, fields: *bi }
+          - { label: "Opciones de molienda (separadas por |)", name: grinds, widget: object, fields: *bi }
+          - { label: Nota de molienda, name: grindNote, widget: object, fields: *bi }
+          - { label: “por taza”, name: perCup, widget: object, fields: *bi }
+          - { label: Volver a tienda, name: back, widget: object, fields: *bi }
+          - { label: Form · Nombre, name: fName, widget: object, fields: *bi }
+          - { label: Form · Negocio, name: fBiz, widget: object, fields: *bi }
+          - { label: Form · Correo, name: fEmail, widget: object, fields: *bi }
+          - { label: Form · WhatsApp, name: fWa, widget: object, fields: *bi }
+          - { label: Form · Ciudad, name: fCity, widget: object, fields: *bi }
+          - { label: Form · Volumen, name: fVolume, widget: object, fields: *bi }
+          - { label: Form · Mensaje, name: fMsg, widget: object, fields: *bi }
+          - { label: Form · Enviar, name: fSend, widget: object, fields: *bi }
+          - { label: Gracias · título, name: thanksTitle, widget: object, fields: *bi }
+          - { label: Gracias · texto, name: thanksBody, widget: object, fields: *bi }
+          - { label: Volver al inicio, name: backHome, widget: object, fields: *bi }
+          - { label: Leer más, name: readMore, widget: object, fields: *bi }
+          - { label: Todas las entradas, name: allPosts, widget: object, fields: *bi }
+          - { label: Enlace privacidad, name: privacyLink, widget: object, fields: *bi }

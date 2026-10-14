@@ -1,0 +1,54 @@
+{
+ "title": {
+  "es": "Nunca te quedes sin café",
+  "en": "Never run out of coffee"
+ },
+ "lede": {
+  "es": "Arma tu entrega, ahorra 10 % en cada envío y olvídate de volver a pedir. Pausa, cambia o cancela cuando quieras desde tu cuenta.",
+  "en": "Build your delivery, save 10% on every shipment and forget about reordering. Pause, change or cancel anytime from your account."
+ },
+ "step1": {
+  "es": "Elige tu café",
+  "en": "Pick your coffee"
+ },
+ "step2": {
+  "es": "Cada cuánto",
+  "en": "How often"
+ },
+ "summary": {
+  "es": "Tu suscripción",
+  "en": "Your subscription"
+ },
+ "regular": {
+  "es": "Precio normal",
+  "en": "Regular price"
+ },
+ "each": {
+  "es": "Cada entrega",
+  "en": "Per delivery"
+ },
+ "save": {
+  "es": "Ahorras 10 % + envío gratis",
+  "en": "You save 10% + free shipping"
+ },
+ "fine": {
+  "es": "Se cobra el día que enviamos. Primera entrega en 3 a 5 días hábiles. Cancela cuando quieras.",
+  "en": "Charged the day we ship. First delivery in 3–5 business days. Cancel anytime."
+ },
+ "button": {
+  "es": "Suscribirme",
+  "en": "Subscribe"
+ },
+ "freq2": {
+  "es": "Cada 2 semanas",
+  "en": "Every 2 weeks"
+ },
+ "freq4": {
+  "es": "Cada 4 semanas",
+  "en": "Every 4 weeks"
+ },
+ "freq8": {
+  "es": "Cada 8 semanas",
+  "en": "Every 8 weeks"
+ }
+}

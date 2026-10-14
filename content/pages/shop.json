@@ -1,0 +1,30 @@
+{
+ "title": {
+  "es": "La tienda",
+  "en": "The shop"
+ },
+ "intro": {
+  "es": "Drips para cuando no hay tiempo, grano para cuando sí. Todo tostado la semana que lo pides.",
+  "en": "Drips for when there’s no time, beans for when there is. All roasted the week you order."
+ },
+ "filterAll": {
+  "es": "Todo",
+  "en": "All"
+ },
+ "filterDrips": {
+  "es": "Drips",
+  "en": "Drips"
+ },
+ "filterBeans": {
+  "es": "Grano entero",
+  "en": "Whole bean"
+ },
+ "shipBanner": {
+  "es": "Envío gratis en pedidos mayores a $599 MXN. El resto, $99 MXN a todo México.",
+  "en": "Free shipping on orders over $599 MXN. Otherwise $99 MXN anywhere in Mexico."
+ },
+ "faqLink": {
+  "es": "Envíos y preguntas frecuentes",
+  "en": "Shipping & FAQ"
+ }
+}

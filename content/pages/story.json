@@ -1,0 +1,35 @@
+{
+ "title": {
+  "es": "Del campo al barrio",
+  "en": "From the farm to the barrio"
+ },
+ "lede": {
+  "es": "Un café de verdad bueno no debería ser un lujo. Trabajamos directo con productores mexicanos para que llegue a cualquier cocina del país.",
+  "en": "Genuinely good coffee shouldn’t be a luxury. We work directly with Mexican growers so it reaches any kitchen in the country."
+ },
+ "image": "/assets/cdmx-cup.jpg",
+ "h1": {
+  "es": "¿Por qué Tlali Mantli?",
+  "en": "Why Tlali Mantli?"
+ },
+ "p1": {
+  "es": "[Placeholder — cuéntanos el significado del nombre y cómo empezó el proyecto.] Tlali Mantli viene del náhuatl y nos recuerda que todo empieza en la tierra.",
+  "en": "[Placeholder — tell us the meaning of the name and how the project started.] Tlali Mantli comes from Nahuatl and reminds us that everything starts in the soil."
+ },
+ "p2": {
+  "es": "México produce algunos de los mejores cafés del mundo, pero casi todo se exporta. Lo que se queda muchas veces es café de baja calidad, tostado de más. Queremos cambiar eso, una taza a la vez.",
+  "en": "Mexico grows some of the best coffee in the world, yet almost all of it is exported. What stays behind is often low-grade, over-roasted coffee. We want to change that, one cup at a time."
+ },
+ "h2": {
+  "es": "Nuestra promesa",
+  "en": "Our promise"
+ },
+ "p3": {
+  "es": "Pagamos un precio justo arriba del mercado, tostamos en lotes pequeños cada semana y te decimos exactamente de dónde viene tu café. Sin letras chiquitas.",
+  "en": "We pay a fair price above market, roast in small batches every week, and tell you exactly where your coffee comes from. No fine print."
+ },
+ "producersTitle": {
+  "es": "Los productores",
+  "en": "The growers"
+ }
+}

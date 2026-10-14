@@ -1,0 +1,8 @@
+---
+pagination:
+  data: collections.blog
+  size: 1
+  alias: post
+permalink: "{{ urlbase }}blog/{{ post.fileSlug }}/"
+---
+{% include "pages/post.njk" %}
