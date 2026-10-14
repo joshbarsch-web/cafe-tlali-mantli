@@ -1,0 +1,12 @@
+{
+ "name": "cafe-tlali-mantli",
+ "private": true,
+ "scripts": {
+  "build": "eleventy",
+  "start": "eleventy --serve"
+ },
+ "dependencies": {
+  "@11ty/eleventy": "^3.0.0",
+  "markdown-it": "^14.1.0"
+ }
+}
