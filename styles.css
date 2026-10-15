@@ -110,6 +110,7 @@ footer.site .row a{color:inherit;text-decoration:none}
 .ph-img{object-fit:cover;border-radius:10px;width:100%}.sq{aspect-ratio:1}.wide{aspect-ratio:16/10}.tall{aspect-ratio:3/4}.photo{aspect-ratio:4/3}
 .prose{font-size:18px;line-height:1.65;max-width:720px}.prose p{margin:0 0 1.2em}.prose h2,.prose h3{color:var(--red);margin:1.4em 0 .5em}.prose img{border-radius:16px}
 
+#cart[hidden],#cart-bg[hidden]{display:none}
 #cart-bg{position:fixed;inset:0;background:rgba(43,26,22,.5);z-index:40}
 #cart{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--cream);z-index:50;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.2)}
 .cart-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1.5px solid var(--red)}

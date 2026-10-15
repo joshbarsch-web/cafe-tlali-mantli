@@ -5,7 +5,7 @@ const Stripe = require('stripe');
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Method not allowed' };
   if (!process.env.STRIPE_SECRET_KEY) return { statusCode: 500, body: JSON.stringify({ error: 'STRIPE_SECRET_KEY no está configurada en Netlify.' }) };
-  const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
+  const stripe = Stripe(process.env.STRIPE_SECRET_KEY.trim(), { httpClient: Stripe.createFetchHttpClient(), timeout: 25000, maxNetworkRetries: 1 });
   try {
     const { items = [], lang: rawLang } = JSON.parse(event.body || '{}');
     const lang = rawLang === 'en' ? 'en' : 'es';
