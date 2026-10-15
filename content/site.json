@@ -1,34 +1,34 @@
 {
- "name": "Café Tlali Mantli",
- "domain": "https://cafetlalimantli.netlify.app",
- "snipcartKey": "YzUzOTE5ZGYtMmNmYi00NjNjLWJmYmQtZTgxYTU0ZGMxMjQ1NjM5Mjc2MDI5OTY1NTU0MjI2",
- "logo": "/assets/logo.jpg",
- "whatsapp": "+52 55 0000 0000",
- "whatsappLink": "525500000000",
- "email": "hola@cafetlalimantli.mx",
- "instagram": "cafetlalimantli",
- "facebook": "https://www.facebook.com/profile.php?id=61577615870121",
- "shippingFlat": 99,
- "freeShippingOver": 599,
- "subscriptionDiscount": 10,
- "footerTag": {
-  "es": "Café Tlali Mantli · Hecho en México",
-  "en": "Café Tlali Mantli · Made in Mexico"
- },
- "shipNote": {
-  "es": "Envíos a todo México · Tarjeta, OXXO o SPEI",
-  "en": "Shipping across Mexico · Card, OXXO or SPEI"
- },
- "ticker": {
-  "es": "Del campo al barrio ✦ Envíos a todo México ✦ Paga con tarjeta, OXXO o SPEI ✦ Tostado cada semana ✦ ",
-  "en": "From the farm to the barrio ✦ Shipping across Mexico ✦ Pay by card, OXXO or SPEI ✦ Roasted weekly ✦ "
- },
- "privacyTitle": {
-  "es": "Aviso de privacidad",
-  "en": "Privacy notice"
- },
- "privacy": {
-  "es": "[Placeholder — aviso de privacidad conforme a la LFPDPPP. Incluir responsable, datos recabados, finalidades y medios para ejercer derechos ARCO.]",
-  "en": "[Placeholder — privacy notice under Mexican LFPDPPP law.]"
- }
+  "domain": "https://cafetlalimantli.netlify.app",
+  "facebook": "https://www.facebook.com/profile.php?id=61577615870121",
+  "shippingFlat": 99,
+  "privacy": {
+    "es": "[Placeholder — aviso de privacidad conforme a la LFPDPPP. Incluir responsable, datos recabados, finalidades y medios para ejercer derechos ARCO.]",
+    "en": "[Placeholder — privacy notice under Mexican LFPDPPP law.]"
+  },
+  "ticker": {
+    "es": "Del campo al barrio ✦ Envíos a todo México ✦ Paga con Tarjeta, Transferencia, Apple Pay, Google Pay, OXXO o Meses Sin Interes ✦ Tostado cada semana ✦ ",
+    "en": "From the farm to the barrio ✦ Shipping across Mexico ✦ Pay by Card, Bank Transfer, Google Pay, Apple Pay, OXXO, or No-Interest Monthly ✦ Roasted weekly ✦ "
+  },
+  "logo": "/assets/logo.jpg",
+  "name": "Café Tlali Mantli",
+  "whatsappLink": "525500000000",
+  "freeShippingOver": 599,
+  "shipNote": {
+    "es": "Envíos a todo México · Tarjeta, Transferencia, Apple Pay, Google Pay, OXXO o Meses Sin Interes",
+    "en": "Shipping across Mexico · Card, Bank Transfer, Google Pay, Apple Pay, OXXO, or No-Interest Monthly"
+  },
+  "privacyTitle": {
+    "es": "Aviso de privacidad",
+    "en": "Privacy notice"
+  },
+  "whatsapp": "+52 55 0000 0000",
+  "instagram": "cafetlalimantli",
+  "email": "hola@cafetlalimantli.mx",
+  "snipcartKey": "YzUzOTE5ZGYtMmNmYi00NjNjLWJmYmQtZTgxYTU0ZGMxMjQ1NjM5Mjc2MDI5OTY1NTU0MjI2",
+  "subscriptionDiscount": 10,
+  "footerTag": {
+    "es": "Café Tlali Mantli · Hecho en México",
+    "en": "Café Tlali Mantli · Made in Mexico"
+  }
 }
