@@ -9,7 +9,7 @@
 <span style="font-weight:700;font-size:26px">{{ p.price | mxn }}</span>
 <p style="margin:0;font-size:17px;line-height:1.55" class="muted">{{ p.long[L] }}</p>
 <div class="chips">{% for n in p.tags[L] | split(',') %}<span>{{ n }}</span>{% endfor %}</div>
-{% if p.kind == 'bean' %}<span style="font-size:14px" class="muted">{{ ui.grind[L] }}: {{ ui.grinds[L] | replace('|', ' · ') }} — {{ ui.grindNote[L] }}</span>{% endif %}
+{% if p.kind == 'bean' %}<label class="stack" style="gap:8px"><b style="font-size:14px">{{ ui.grind[L] }}</b><select id="grind" class="sel">{% for g in ui.grinds[L] | split('|') %}<option value="{{ loop.index0 }}">{{ g }}</option>{% endfor %}</select></label>{% endif %}
 {% if p.cups %}<span style="font-weight:500;color:var(--red)">{{ (p.price / p.cups) | round | mxn }} {{ ui.perCup[L] }}</span>{% endif %}
-{{ buy(p, L, U, ui, site, 'btn-red') }}
+<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="qty"><button type="button" onclick="var q=document.getElementById('qty');q.textContent=Math.max(1,+q.textContent-1)">−</button><span id="qty">1</span><button type="button" onclick="var q=document.getElementById('qty');q.textContent=+q.textContent+1">+</button></div>{{ buy(p, L, U, ui, site, 'btn-red') }}</div>
 <span style="font-size:14px" class="muted">{{ site.shipNote[L] }}</span></div></div></div></section>

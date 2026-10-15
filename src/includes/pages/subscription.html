@@ -7,16 +7,14 @@
 <div class="stack" style="gap:12px"><span class="kicker" style="font-weight:700;letter-spacing:.12em">2 · {{ d.step2[L] }}</span><div style="display:flex;gap:10px;flex-wrap:wrap" id="freqs">{% for f in freqs %}<button class="pill{% if f == 4 %} on{% endif %}" data-f="{{ f }}">{{ d['freq' + f][L] }}</button>{% endfor %}</div></div></div>
 <div class="summary"><span class="k">{{ d.summary[L] }}</span><b class="name" id="sName"></b><span id="sFreq" style="font-size:16px;color:rgba(243,238,226,.75)"></span>
 <div class="tot"><div style="font-size:15px;color:rgba(243,238,226,.75)"><span>{{ d.regular[L] }}</span><s id="sReg"></s></div><div style="font-weight:700;font-size:22px"><span>{{ d.each[L] }}</span><span id="sPrice" style="color:var(--pink)"></span></div><span style="font-size:13px;color:var(--pink)">{{ d.save[L] }}</span></div>
-<button id="subBtn" class="snipcart-add-item btn btn-pink" data-item-url="/snipcart-products.json" data-item-image="{{ site.logo }}" data-item-shippable="true">{{ d.button[L] }}</button>
+<button type="button" id="subBtn" class="btn btn-pink">{{ d.button[L] }}</button>
 <span style="font-size:13px;line-height:1.5;color:rgba(243,238,226,.6)">{{ d.fine[L] }}</span></div></div></div></section>
 <script>
-const P={{ subProducts | json | safe }},L='{{ L }}',FQ={2:'{{ d.freq2[L] }}',4:'{{ d.freq4[L] }}',8:'{{ d.freq8[L] }}'},DISC={{ site.subscriptionDiscount or 10 }},GN='{{ ui.grind[L] }}',GO='{{ ui.grinds[L] }}';let pi=0,fr=4;
+const P={{ subProducts | json | safe }},L='{{ L }}',FQ={2:'{{ d.freq2[L] }}',4:'{{ d.freq4[L] }}',8:'{{ d.freq8[L] }}'},DISC={{ site.subscriptionDiscount or 10 }};let pi=0,fr=4;
 const fmt=n=>'$'+n.toLocaleString('es-MX')+' MXN';
-function upd(){const p=P[pi],price=Math.round(p.price*(1-DISC/100)),b=document.getElementById('subBtn');
-document.getElementById('sName').textContent=p.name[L];document.getElementById('sFreq').textContent=FQ[fr];document.getElementById('sReg').textContent=fmt(p.price);document.getElementById('sPrice').textContent=fmt(price);
-b.dataset.itemId=p.id+'-sub-'+fr;b.dataset.itemName=p.name[L]+' · '+FQ[fr];b.dataset.itemPrice=price;b.dataset.itemDescription=FQ[fr];
-b.dataset.itemPlan1Id='cada-'+fr+'-semanas';b.dataset.itemPlan1Name=FQ[fr];b.dataset.itemPlan1Frequency='Weekly';b.dataset.itemPlan1Interval=fr;b.dataset.itemSelectedPlan='cada-'+fr+'-semanas';
-if(p.kind==='bean'){b.dataset.itemCustom1Name=GN;b.dataset.itemCustom1Options=GO;}else{delete b.dataset.itemCustom1Name;delete b.dataset.itemCustom1Options;}}
+function upd(){const p=P[pi],price=Math.round(p.price*(1-DISC/100));
+document.getElementById('sName').textContent=p.name[L];document.getElementById('sFreq').textContent=FQ[fr];document.getElementById('sReg').textContent=fmt(p.price);document.getElementById('sPrice').textContent=fmt(price);}
 document.querySelectorAll('#opts .opt').forEach(o=>o.onclick=()=>{document.querySelectorAll('#opts .opt').forEach(x=>x.classList.remove('on'));o.classList.add('on');pi=+o.dataset.i;upd();});
 document.querySelectorAll('#freqs .pill').forEach(o=>o.onclick=()=>{document.querySelectorAll('#freqs .pill').forEach(x=>x.classList.remove('on'));o.classList.add('on');fr=+o.dataset.f;upd();});
+document.getElementById('subBtn').onclick=()=>window.tlmAdd(P[pi].id,{sub:fr,grind:0});
 upd();</script>

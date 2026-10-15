@@ -27,13 +27,23 @@ Sitio estático generado con Eleventy. El contenido vive en `content/` (JSON) y 
 - **Productos** — precio, nombre, descripción, foto, si entra en suscripción. Al crear uno nuevo, el ID va en minúsculas sin espacios (`drips-200`) y no se cambia después.
 - **Blog** — entradas en español e inglés.
 - **Páginas** — todos los textos de Inicio, Drips, Tienda, Historia, Suscripción, Mayoreo, FAQ, Contacto.
-- **Ajustes → Sitio y contacto** — WhatsApp, correo, Instagram, costo de envío, umbral de envío gratis, % de suscripción, llave de Snipcart, aviso de privacidad.
+- **Ajustes → Sitio y contacto** — WhatsApp, correo, Instagram, costo de envío, umbral de envío gratis, % de suscripción, aviso de privacidad.
 - **Ajustes → Textos de interfaz** — menú, botones, formularios.
 
 Las fotos se suben desde cualquier campo de imagen y quedan en `assets/uploads/`.
 
-## Snipcart
-Las variantes de suscripción se generan automáticamente en `/snipcart-products.json`; no hay que tocar nada al cambiar precios. En el panel de Snipcart: dominio autorizado, Stripe México (OXXO + SPEI), envío $99 / gratis ≥ $599.
+## Pagos (Stripe Checkout)
+El carrito vive en el sitio; al pagar, el cliente pasa a la página de pago de Stripe (tarjeta, Apple Pay, Google Pay, OXXO — lo que tengas activo en Stripe → Settings → Payment methods). Precios, envío y descuento de suscripción salen de /admin → Ajustes.
+
+**Una sola vez:**
+1. Stripe → **Developers → API keys** → copia la **Secret key** (empieza con `sk_test_` en modo prueba, `sk_live_` en vivo).
+2. Netlify → **Site configuration → Environment variables → Add a variable** → Key: `STRIPE_SECRET_KEY`, Value: la llave → Save.
+3. Netlify → **Deploys → Trigger deploy** para que la función tome la variable.
+4. Prueba con la llave `sk_test_` y la tarjeta `4242 4242 4242 4242`; cuando todo esté bien, cambia la variable por la `sk_live_` y vuelve a hacer Trigger deploy.
+
+**Pedidos:** Stripe → **Payments** (dirección de envío y teléfono vienen en cada pago). Activa recibos: Stripe → Settings → Emails → "Successful payments".
+**Suscripciones:** Stripe → **Subscriptions**. Para que el cliente pueda cancelar solo: Stripe → Settings → Billing → **Customer portal** → activa y copia el enlace de acceso; pégalo en la respuesta del FAQ sobre cancelar.
+**Envío:** $99 o gratis desde $599 (ambos ajustables en /admin → Ajustes → Sitio y contacto). Solo México.
 
 ## Formularios
 `contacto` y `mayoreo` llegan a Netlify → **Forms**. Activa notificaciones por correo ahí.

@@ -109,3 +109,27 @@ footer.site .row a{color:inherit;text-decoration:none}
 
 .ph-img{object-fit:cover;border-radius:10px;width:100%}.sq{aspect-ratio:1}.wide{aspect-ratio:16/10}.tall{aspect-ratio:3/4}.photo{aspect-ratio:4/3}
 .prose{font-size:18px;line-height:1.65;max-width:720px}.prose p{margin:0 0 1.2em}.prose h2,.prose h3{color:var(--red);margin:1.4em 0 .5em}.prose img{border-radius:16px}
+
+#cart-bg{position:fixed;inset:0;background:rgba(43,26,22,.5);z-index:40}
+#cart{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--cream);z-index:50;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,.2)}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1.5px solid var(--red)}
+.cart-head b{font-family:'Abril Fatface',serif;font-weight:400;font-size:28px;color:var(--red)}
+#cart-close{background:none;border:1.5px solid var(--ink);border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:18px}
+.cart-body{flex:1;overflow:auto;padding:16px 24px;display:flex;flex-direction:column;gap:16px}
+.cart-empty{margin:24px 0;color:rgba(43,26,22,.65);line-height:1.5}
+.cart-line{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:start}
+.cart-line img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.cart-mid{display:flex;flex-direction:column;gap:4px;min-width:0;font-size:13px}
+.cart-mid>b{font-size:15px}.cart-mid>span{color:rgba(43,26,22,.65)}
+.cart-grind,.sel{border:1.5px solid var(--ink);border-radius:8px;padding:6px 8px;background:#fff;font-size:13px;max-width:100%}
+.sel{padding:12px 14px;font-size:15px;min-height:46px;border-radius:10px}
+.cart-qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.cart-qty button{border:1.5px solid var(--ink);background:none;border-radius:999px;width:28px;height:28px;cursor:pointer}
+.cart-qty .cart-rm{width:auto;padding:0 10px;font-size:12px;border-color:transparent;color:rgba(43,26,22,.6)}
+.cart-foot{padding:20px 24px 28px;border-top:1.5px solid var(--red);display:flex;flex-direction:column;gap:10px}
+.cart-row{display:flex;justify-content:space-between;font-size:15px}.cart-tot{font-weight:700;font-size:20px}
+.cart-note{font-size:13px;color:rgba(43,26,22,.6);line-height:1.4}
+#cart-go:disabled{opacity:.5;cursor:default}
+.qty{display:flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.qty button{background:none;border:0;padding:0 16px;font-weight:700;font-size:18px;cursor:pointer;min-height:48px}
+.qty span{font-weight:700;font-size:16px;line-height:48px;min-width:24px;text-align:center}

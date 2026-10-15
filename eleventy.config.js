@@ -6,6 +6,7 @@ module.exports = function (c) {
   const read = (f) => JSON.parse(fs.readFileSync(path.join('content', f), 'utf8'));
   const site = read('site.json');
   const ui = read('ui.json');
+  const cart = read('cart.json');
   const pages = {};
   for (const f of fs.readdirSync('content/pages')) pages[f.replace('.json', '')] = read('pages/' + f);
   const products = fs.readdirSync('content/products').map((f) => read('products/' + f)).sort((a, b) => a.order - b.order);
@@ -13,26 +14,28 @@ module.exports = function (c) {
   c.addPassthroughCopy('assets');
   c.addPassthroughCopy('admin');
   c.addPassthroughCopy('styles.css');
+  c.addPassthroughCopy('cart.js');
   c.addPassthroughCopy('robots.txt');
   c.addWatchTarget('content');
   // Ignore legacy .njk templates / _includes left over from earlier uploads
   c.ignores.add('src/**/*.njk');
   c.ignores.add('src/_includes/**');
+  c.ignores.add('src/snipcart-products.html');
 
   c.addGlobalData('site', site);
   c.addGlobalData('ui', ui);
+  c.addGlobalData('cart', cart);
   c.addGlobalData('pg', pages);
   c.addGlobalData('products', products);
   c.addGlobalData('subProducts', products.filter((p) => p.subscription));
   c.addGlobalData('freqs', [2, 4, 8]);
-  // Static product list Snipcart uses to validate subscription variants (price is the discounted one)
-  const disc = (n) => Math.round(n * (1 - (site.subscriptionDiscount || 10) / 100));
-  const sub = pages.subscription;
-  c.addGlobalData('snipcartProducts', products.filter((p) => p.subscription).flatMap((p) => [2, 4, 8].map((f) => ({
-    id: p.id + '-sub-' + f, name: p.name.es + ' · ' + sub['freq' + f].es, price: disc(p.price), url: '/suscripcion/', shippable: true,
-    plans: [{ id: 'cada-' + f + '-semanas', name: sub['freq' + f].es, frequency: 'Weekly', interval: f }],
-    ...(p.kind === 'bean' ? { customFields: [{ name: ui.grind.es, options: ui.grinds.es }] } : {})
-  }))));
+  const freqLabel = (lng) => ({ 2: pages.subscription.freq2[lng], 4: pages.subscription.freq4[lng], 8: pages.subscription.freq8[lng] });
+  // Public catalog used by the on-site cart and re-read by the checkout function (source of truth for prices)
+  c.addGlobalData('storeData', {
+    products: products.map((p) => ({ id: p.id, kind: p.kind, name: p.name, price: p.price, image: p.image || site.logo, subscription: !!p.subscription })),
+    shippingFlat: site.shippingFlat, freeShippingOver: site.freeShippingOver, subscriptionDiscount: site.subscriptionDiscount, logo: site.logo,
+    grinds: { es: ui.grinds.es.split('|'), en: ui.grinds.en.split('|') }, freqs: { es: freqLabel('es'), en: freqLabel('en') }
+  });
 
   c.addCollection('blog', (api) => api.getFilteredByGlob('src/blog/*.md').sort((a, b) => b.date - a.date));
 

@@ -6,6 +6,7 @@ const map = {
 };
 module.exports = {
   eleventyComputed: {
+    cartI18n: (d) => Object.fromEntries([['lang', d.lang], ...Object.entries(d.cart).map(([k, v]) => [k, v[d.lang]])]),
     title: (d) => {
       const L = d.lang;
       if (d.p) return d.p.name[L];

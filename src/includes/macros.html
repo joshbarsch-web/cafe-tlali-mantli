@@ -1,5 +1,5 @@
 {% macro buy(p, L, U, ui, site, cls, label) -%}
-<button class="snipcart-add-item btn {{ cls }}" data-item-id="{{ p.id }}" data-item-name="{{ p.name[L] }}" data-item-price="{{ p.price }}" data-item-url="{{ U }}producto/{{ p.id }}/" data-item-description="{{ p.desc[L] }}" data-item-image="{{ p.image or site.logo }}"{% if p.kind == 'bean' %} data-item-custom1-name="{{ ui.grind[L] }}" data-item-custom1-options="{{ ui.grinds[L] }}"{% endif %}>{{ label or ui.add[L] }}</button>
+<button type="button" class="btn {{ cls }} tlm-buy" data-id="{{ p.id }}">{{ label or ui.add[L] }}</button>
 {%- endmacro %}
 
 {% macro ph(cls, label, img, extra) -%}

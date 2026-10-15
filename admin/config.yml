@@ -224,7 +224,6 @@ collections:
           - { label: Correo, name: email, widget: string }
           - { label: Usuario de Instagram (sin @), name: instagram, widget: string }
           - { label: URL de Facebook, name: facebook, widget: string }
-          - { label: Snipcart public API key, name: snipcartKey, widget: string }
           - { label: Envío (MXN), name: shippingFlat, widget: number, value_type: int }
           - { label: Envío gratis a partir de (MXN), name: freeShippingOver, widget: number, value_type: int }
           - { label: Descuento suscripción (%), name: subscriptionDiscount, widget: number, value_type: int }
@@ -233,6 +232,22 @@ collections:
           - { label: Cinta deslizante, name: ticker, widget: object, fields: *bi }
           - { label: Título aviso de privacidad, name: privacyTitle, widget: object, fields: *bi }
           - { label: Aviso de privacidad, name: privacy, widget: object, fields: *bim }
+      - name: cart
+        label: Carrito y pago
+        file: content/cart.json
+        fields:
+          - { label: Carrito vacío, name: cartEmpty, widget: object, fields: *bi }
+          - { label: Envío, name: shipping, widget: object, fields: *bi }
+          - { label: Gratis, name: free, widget: object, fields: *bi }
+          - { label: "Falta para envío gratis ({x} = monto)", name: freeShipMsg, widget: object, fields: *bi }
+          - { label: Ya tiene envío gratis, name: freeShipOk, widget: object, fields: *bi }
+          - { label: Botón pagar, name: checkout, widget: object, fields: *bi }
+          - { label: "c/u", name: each, widget: object, fields: *bi }
+          - { label: Quitar, name: remove, widget: object, fields: *bi }
+          - { label: Métodos de pago (texto bajo el botón), name: payWith, widget: object, fields: *bi }
+          - { label: Error al pagar, name: checkoutError, widget: object, fields: *bi }
+          - { label: Gracias por tu pedido · título, name: orderTitle, widget: object, fields: *bi }
+          - { label: Gracias por tu pedido · texto, name: orderBody, widget: object, fields: *bit }
       - name: ui
         label: Textos de interfaz
         file: content/ui.json

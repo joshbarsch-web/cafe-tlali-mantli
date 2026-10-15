@@ -1,0 +1,14 @@
+{
+ "cartEmpty": { "es": "Tu carrito está vacío. Un drip no te caería mal.", "en": "Your cart is empty. A drip wouldn’t hurt." },
+ "shipping": { "es": "Envío", "en": "Shipping" },
+ "free": { "es": "Gratis", "en": "Free" },
+ "freeShipMsg": { "es": "Te faltan {x} para envío gratis", "en": "{x} away from free shipping" },
+ "freeShipOk": { "es": "¡Tienes envío gratis!", "en": "You’ve got free shipping!" },
+ "checkout": { "es": "Pagar", "en": "Checkout" },
+ "each": { "es": "c/u", "en": "each" },
+ "remove": { "es": "Quitar", "en": "Remove" },
+ "payWith": { "es": "Pago seguro con Stripe · Tarjeta, Apple Pay, Google Pay u OXXO", "en": "Secure checkout by Stripe · Card, Apple Pay, Google Pay or OXXO" },
+ "checkoutError": { "es": "No pudimos abrir el pago. Intenta de nuevo o escríbenos por WhatsApp.", "en": "We couldn’t open checkout. Try again or message us on WhatsApp." },
+ "orderTitle": { "es": "¡Gracias por tu pedido!", "en": "Thanks for your order!" },
+ "orderBody": { "es": "Te mandamos la confirmación por correo. Tostamos esta semana y te avisamos con el número de guía cuando salga.", "en": "We’ve emailed your confirmation. We roast this week and will send your tracking number when it ships." }
+}
