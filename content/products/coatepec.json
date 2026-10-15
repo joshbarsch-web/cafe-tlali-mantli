@@ -1,30 +1,30 @@
 {
- "id": "coatepec",
- "order": 4,
- "kind": "bean",
- "price": 189,
- "image": "",
- "subscription": true,
- "region": "Coatepec",
- "state": "Veracruz",
- "name": {
-  "es": "Coatepec, Veracruz",
-  "en": "Coatepec, Veracruz"
- },
- "desc": {
-  "es": "Chocolate, nuez, cuerpo medio. El clásico de todos los días.",
-  "en": "Chocolate, nut, medium body. The everyday classic."
- },
- "tags": {
-  "es": "Chocolate, Nuez, Cuerpo medio",
-  "en": "Chocolate, Nut, Medium body"
- },
- "farm": {
-  "es": "Finca placeholder · 1,250 msnm · familia productora desde hace tres generaciones.",
-  "en": "Placeholder farm · 1,250 masl · third-generation growing family."
- },
- "long": {
-  "es": "Bolsa de 250 g con válvula. Tostamos en lotes pequeños la semana que haces tu pedido y te decimos la fecha de tueste en la etiqueta.",
-  "en": "250 g valve bag. We roast in small batches the week you order and print the roast date on the label."
- }
+  "price": 189,
+  "name": {
+    "es": "Coatepec, Veracruz",
+    "en": "Coatepec, Veracruz"
+  },
+  "order": 3,
+  "state": "Veracruz",
+  "desc": {
+    "es": "Chocolate, nuez, cuerpo medio. El clásico de todos los días.",
+    "en": "Chocolate, nut, medium body. The everyday classic."
+  },
+  "region": "Coatepec",
+  "kind": "bean",
+  "farm": {
+    "es": "Finca placeholder · 1,250 msnm · familia productora desde hace tres generaciones.",
+    "en": "Placeholder farm · 1,250 masl · third-generation growing family."
+  },
+  "tags": {
+    "es": "Chocolate, Nuez, Cuerpo medio",
+    "en": "Chocolate, Nut, Medium body"
+  },
+  "id": "coatepec",
+  "image": "",
+  "long": {
+    "es": "Bolsa de 250 g con válvula. Tostamos en lotes pequeños la semana que haces tu pedido y te decimos la fecha de tueste en la etiqueta.",
+    "en": "250 g valve bag. We roast in small batches the week you order and print the roast date on the label."
+  },
+  "subscription": true
 }
