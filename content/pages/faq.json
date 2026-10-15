@@ -1,82 +1,82 @@
 {
- "title": {
-  "es": "Preguntas frecuentes y envíos",
-  "en": "FAQ & shipping"
- },
- "lede": {
-  "es": "Lo que más nos preguntan. Si no está aquí, escríbenos por WhatsApp.",
-  "en": "What people ask most. If it’s not here, message us on WhatsApp."
- },
- "items": [
-  {
-   "q": {
-    "es": "¿A dónde envían?",
-    "en": "Where do you ship?"
-   },
-   "a": {
-    "es": "A toda la República Mexicana. Por ahora no enviamos al extranjero, pero pronto.",
-    "en": "Anywhere in Mexico. No international shipping yet, but soon."
-   }
+  "title": {
+    "es": "Preguntas frecuentes y envíos",
+    "en": "FAQ & shipping"
   },
-  {
-   "q": {
-    "es": "¿Cuánto cuesta y cuánto tarda el envío?",
-    "en": "How much is shipping and how long does it take?"
-   },
-   "a": {
-    "es": "$99 MXN a todo México; gratis en pedidos mayores a $599 MXN. Tarda de 3 a 5 días hábiles. Te mandamos el número de guía por correo y WhatsApp.",
-    "en": "$99 MXN anywhere in Mexico; free on orders over $599 MXN. 3–5 business days. We send your tracking number by email and WhatsApp."
-   }
+  "lede": {
+    "es": "Lo que más nos preguntan. Si no está aquí, escríbenos por WhatsApp.",
+    "en": "What people ask most. If it’s not here, message us on WhatsApp."
   },
-  {
-   "q": {
-    "es": "¿Cómo puedo pagar?",
-    "en": "How can I pay?"
-   },
-   "a": {
-    "es": "Con tarjeta de crédito o débito, en efectivo en OXXO o por transferencia SPEI. Todos los precios son en pesos mexicanos e incluyen IVA.",
-    "en": "Credit or debit card, cash at OXXO, or SPEI bank transfer. All prices in Mexican pesos, tax included."
-   }
-  },
-  {
-   "q": {
-    "es": "¿Cuánto dura un drip?",
-    "en": "How long does a drip keep?"
-   },
-   "a": {
-    "es": "Doce meses sellado. Una vez abierto el sobre, úsalo ese día; el café molido pierde aroma rápido.",
-    "en": "Twelve months sealed. Once the sachet is open, use it that day; ground coffee loses aroma fast."
-   }
-  },
-  {
-   "q": {
-    "es": "¿Puedo pedir el grano molido?",
-    "en": "Can I order beans ground?"
-   },
-   "a": {
-    "es": "Sí. Al agregar grano a tu carrito eliges entre grano entero, molido para filtro o molido para prensa.",
-    "en": "Yes. When adding beans to your cart, choose whole bean, ground for filter, or ground for French press."
-   }
-  },
-  {
-   "q": {
-    "es": "¿Cuándo tuestan?",
-    "en": "When do you roast?"
-   },
-   "a": {
-    "es": "Cada semana. Tu pedido sale con café tostado máximo siete días antes y la fecha va impresa en la bolsa.",
-    "en": "Every week. Your order ships with coffee roasted at most seven days earlier, with the date printed on the bag."
-   }
-  },
-  {
-   "q": {
-    "es": "¿Puedo cambiar o cancelar mi suscripción?",
-    "en": "Can I change or cancel my subscription?"
-   },
-   "a": {
-    "es": "Cuando quieras, desde el enlace que te llega en cada correo de confirmación. Sin penalización.",
-    "en": "Anytime, from the link in every confirmation email. No penalty."
-   }
-  }
- ]
+  "items": [
+    {
+      "q": {
+        "es": "¿A dónde envían?",
+        "en": "Where do you ship?"
+      },
+      "a": {
+        "es": "A toda la República Mexicana. Por ahora no enviamos al extranjero, pero pronto.",
+        "en": "Anywhere in Mexico. No international shipping yet, but soon."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Cuánto cuesta y cuánto tarda el envío?",
+        "en": "How much is shipping and how long does it take?"
+      },
+      "a": {
+        "es": "$99 MXN a todo México; gratis en pedidos mayores a $599 MXN. Tarda de 3 a 5 días hábiles. Te mandamos el número de guía por correo y WhatsApp.",
+        "en": "$99 MXN anywhere in Mexico; free on orders over $599 MXN. 3–5 business days. We send your tracking number by email and WhatsApp."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Cómo puedo pagar?",
+        "en": "How can I pay?"
+      },
+      "a": {
+        "es": "Con tarjeta de crédito o débito, en efectivo en OXXO, Apple Pay, Google Pay o transferencia bancaria. Todos los precios son en pesos mexicanos.",
+        "en": "Credit or debit card, Apple Pay, Google Pay, bank transfer, or cash at OXXO. All prices in Mexican pesos."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Cuánto dura un drip?",
+        "en": "How long does a drip keep?"
+      },
+      "a": {
+        "es": "Doce meses sellado. Una vez abierto el sobre, úsalo ese día; el café molido pierde aroma rápido.",
+        "en": "Twelve months sealed. Once the sachet is open, use it that day; ground coffee loses aroma fast."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Puedo pedir el grano molido?",
+        "en": "Can I order beans ground?"
+      },
+      "a": {
+        "es": "Sí. Al agregar grano a tu carrito eliges entre grano entero, molido para filtro o molido para prensa.",
+        "en": "Yes. When adding beans to your cart, choose whole bean, ground for filter, or ground for French press."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Cuándo tuestan?",
+        "en": "When do you roast?"
+      },
+      "a": {
+        "es": "Cada semana. Tu pedido sale con café tostado máximo siete días antes y la fecha va impresa en la bolsa.",
+        "en": "Every week. Your order ships with coffee roasted at most seven days earlier, with the date printed on the bag."
+      }
+    },
+    {
+      "q": {
+        "es": "¿Puedo cambiar o cancelar mi suscripción?",
+        "en": "Can I change or cancel my subscription?"
+      },
+      "a": {
+        "es": "Cuando quieras, desde el enlace que te llega en cada correo de confirmación. Sin penalización.",
+        "en": "Anytime, from the link in every confirmation email. No penalty."
+      }
+    }
+  ]
 }
